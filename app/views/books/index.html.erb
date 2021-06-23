@@ -1,0 +1,44 @@
+<body>
+  <h1>Books</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Title<th>
+        <th>Body</th>
+        <th></th>
+       </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>リーダブルコード</td>
+        <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
+        <td>
+         <a>Show</a>
+        </td>
+        <td >
+          <a>Edit</a>
+        </td>
+        <td>
+          <a>Destroy</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="newbook">
+  <h2>New book</h2>
+  
+  <%=form_with model:@blog,local:true do |f| %>
+  
+  <h4>Title</h4>
+  
+  <%=f.text_field:title %>
+  
+  <h4>Body</h4>
+  
+  <%=f.text_area:body %>
+  
+  <%=f.submit'Create Book'%>
+  
+  <% end %>
+  </div>
+</body>
